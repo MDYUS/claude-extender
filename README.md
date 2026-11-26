@@ -1,6 +1,8 @@
-# Claude Extender
+# Claude Extender — Claude Code Token Optimizer & Usage Tracker
 
-Local-first developer toolkit for reducing unnecessary context and preserving coding continuity. Independent of Anthropic. Does not extend, reset or bypass subscription quotas.
+Open-source Claude Code token optimizer, usage tracker, context manager and session checkpoint tool. Local-first; no API key needed.
+
+Independent of Anthropic. Does not extend, reset or bypass subscription quotas.
 
 ## Run
 
@@ -32,3 +34,24 @@ Five tests passed on the local prototype. The synthetic benchmark compares eligi
 Official hooks, robust ignore handling, dependency-aware selection, real token-count benchmarking, authorized model adapters and a local dashboard. No automatic provider switching or subscription bypass in this release.
 
 MIT license.
+
+
+## Install the Claude Code plugin
+
+Inside Claude Code, run:
+
+```text
+/plugin marketplace add MDYUS/claude-extender
+/plugin install claude-extender@mdyus-tools
+/reload-plugins
+```
+
+Requires Node.js 22+ and Git on your machine. The plugin exposes manual skills: /claude-extender:usage, /claude-extender:context, /claude-extender:checkpoint, /claude-extender:resume. Normal Claude permissions apply. No automatic hooks, account changes, or provider switching. Plugin installation has not been tested in an authenticated Claude Code client.
+
+## Claude Code usage limit FAQ
+
+**Can this increase Claude credits?** No. It selects relevant code, reports observed local usage, and preserves manual progress notes. Subscription limits are controlled by Anthropic.
+
+**How can I reduce context consumption?** Use the context command to select snippets within a byte budget. Review for completeness and secrets. Byte reduction is not measured token reduction.
+
+**How can I continue after a usage limit?** Save a checkpoint before the limit and resume in an authorized environment later.
