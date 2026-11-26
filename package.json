@@ -1,0 +1,1 @@
+{"name":"claude-extender","version":"0.1.0","type":"module","private":true,"bin":{"claude-extender":"src/cli.mjs"},"engines":{"node":">=22"},"scripts":{"test":"node --test","benchmark":"node src/benchmark.mjs"},"license":"MIT"}
