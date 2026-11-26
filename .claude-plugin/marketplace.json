@@ -1,0 +1,13 @@
+{
+  "name": "mdyus-tools",
+  "owner": {
+    "name": "MDYUS"
+  },
+  "plugins": [
+    {
+      "name": "claude-extender",
+      "source": "./",
+      "description": "Local usage analysis, targeted context and Git checkpoints"
+    }
+  ]
+}
